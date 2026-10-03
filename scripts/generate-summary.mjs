@@ -1,5 +1,5 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { createSummary } from "../lib/summary.mjs";
+import { createSummary, resolveGeneratedAt } from "../lib/summary.mjs";
 import { validateReleases } from "../lib/validate.mjs";
 
 const dataFile = new URL("../data/releases.json", import.meta.url);
@@ -11,7 +11,8 @@ try {
   const errors = validateReleases(releases);
   if (errors.length) throw new Error(`data validation failed: ${errors.join("; ")}`);
   await mkdir(outputDir, { recursive: true });
-  await writeFile(outputFile, createSummary(releases), "utf8");
+  const generatedAt = resolveGeneratedAt(process.env.SUMMARY_GENERATED_AT);
+  await writeFile(outputFile, createSummary(releases, generatedAt), "utf8");
   console.log(`Generated ${outputFile.pathname}`);
 } catch (error) {
   console.error(`Unable to generate release summary: ${error.message}`);

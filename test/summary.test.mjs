@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createSummary } from "../lib/summary.mjs";
+import { createSummary, resolveGeneratedAt } from "../lib/summary.mjs";
 
 const generatedAt = new Date("2026-10-03T00:00:00.000Z");
 
@@ -29,5 +29,10 @@ test("escapes Markdown table separators", () => {
     }
   ], generatedAt);
   assert.match(summary, /One \\\| Two/);
+});
+
+test("resolves a reproducible generated timestamp", () => {
+  assert.equal(resolveGeneratedAt("2026-10-03T00:00:00.000Z").toISOString(), "2026-10-03T00:00:00.000Z");
+  assert.throws(() => resolveGeneratedAt("not-a-date"), /valid date-time/);
 });
 
