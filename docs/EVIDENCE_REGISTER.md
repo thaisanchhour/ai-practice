@@ -15,7 +15,10 @@ Prepared on 2026-10-03. Status values distinguish completed local work from exte
 ## Required completion records
 
 - Merge or closure status for PRs 1 through 5.
-- Successful CI run URL after the delivery workflow is available on the target branch.
 - GitHub Pages deployment URL and post-release verification.
 - Sharing dates, audience, and shared location for the guide and two how-to records.
+
+## Hosted verification
+
+- CI run: https://github.com/thaisanchhour/ai-practice/actions/runs/37104561800 (completed successfully on 2026-10-03).
 

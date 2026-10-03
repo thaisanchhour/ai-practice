@@ -1,10 +1,10 @@
 # Release and Post Release Checklist
 
 - [ ] Acceptance criteria verified
-- [ ] Data validation passed
-- [ ] Automated tests passed
-- [ ] Pull-request review findings resolved
-- [ ] CI run succeeded
+- [x] Data validation passed
+- [x] Automated tests passed
+- [x] Pull-request review findings resolved
+- [x] CI run succeeded: https://github.com/thaisanchhour/ai-practice/actions/runs/37104561800
 - [ ] GitHub Pages deployment succeeded
 - [ ] Published page loaded successfully
 - [ ] Filters and keyboard navigation verified

@@ -15,6 +15,6 @@ Review CI permissions, Pages deployment, credential handling, MCP configuration,
 | Finding | Evidence | Decision | Verification |
 | --- | --- | --- | --- |
 | The Pages artifact omitted `lib/risk.mjs`, which `src/app.mjs` imports | The original workflow copied only `index.html`, `src/`, and `data/` | Accepted and fixed by copying `lib/risk.mjs` into `_site/lib/` | Local packaging check confirms every browser import exists in `_site` |
-| CI uses read-only repository contents permission | `.github/workflows/ci.yml` declares `contents: read` | Accepted | Workflow syntax and the `npm run check` command were reviewed; hosted execution remains pending until merge or dispatch |
+| CI uses read-only repository contents permission | `.github/workflows/ci.yml` declares `contents: read` | Accepted | Hosted CI run 37104561800 completed successfully |
 | MCP credentials must stay outside the repository | The example prompts for a token; `.gitignore` excludes `.vscode/mcp.json` and environment files | Accepted | No token or private workplace data is present in tracked files |
 
