@@ -1,0 +1,55 @@
+[
+  {
+    "id": "release-001",
+    "name": "Dashboard foundation",
+    "owner": "Personal project",
+    "targetDate": "2026-10-10",
+    "status": "ready",
+    "checks": {
+      "tests": true,
+      "security": true,
+      "accessibility": true,
+      "rollback": true
+    },
+    "risks": []
+  },
+  {
+    "id": "release-002",
+    "name": "Automated summary",
+    "owner": "Personal project",
+    "targetDate": "2026-10-12",
+    "status": "review",
+    "checks": {
+      "tests": true,
+      "security": true,
+      "accessibility": false,
+      "rollback": true
+    },
+    "risks": [
+      {
+        "severity": "medium",
+        "description": "Keyboard navigation verification is pending"
+      }
+    ]
+  },
+  {
+    "id": "release-003",
+    "name": "GitHub workflow integration",
+    "owner": "Personal project",
+    "targetDate": "2026-10-15",
+    "status": "blocked",
+    "checks": {
+      "tests": true,
+      "security": false,
+      "accessibility": true,
+      "rollback": false
+    },
+    "risks": [
+      {
+        "severity": "high",
+        "description": "Deployment permissions are not configured"
+      }
+    ]
+  }
+]
+

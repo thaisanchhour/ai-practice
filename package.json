@@ -1,0 +1,17 @@
+{
+  "name": "ai-release-readiness-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-data.mjs",
+    "summary": "node scripts/generate-summary.mjs",
+    "new-release": "node scripts/create-release.mjs",
+    "check": "npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
