@@ -33,6 +33,11 @@ test("reports invalid status, checks, and risks", () => {
   assert.equal(errors.length, 4);
 });
 
+test("rejects an impossible calendar date", () => {
+  const errors = validateReleases([{ ...validRelease, targetDate: "2026-02-30" }]);
+  assert.ok(errors.some((error) => error.includes("valid calendar date")));
+});
+
 test("rejects a non-array root", () => {
   assert.deepEqual(validateReleases({}), ["root must be an array"]);
 });
