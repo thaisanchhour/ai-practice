@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal release-readiness dashboard">
+    <title>Release Readiness Dashboard</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">Personal engineering project</p>
+        <h1>Release readiness</h1>
+        <p class="lede">Review verification status, risk, and the next action for each planned release.</p>
+      </header>
+
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Portfolio summary</h2>
+        <div id="summary-cards" class="summary-grid" aria-live="polite"></div>
+      </section>
+
+      <section aria-labelledby="releases-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="releases-heading">Planned releases</h2>
+            <p id="result-count">Loading release data</p>
+          </div>
+          <label class="filter-control">
+            Status
+            <select id="status-filter">
+              <option value="all">All</option>
+              <option value="ready">Ready</option>
+              <option value="review">Needs review</option>
+              <option value="blocked">Blocked</option>
+            </select>
+          </label>
+        </div>
+        <div id="release-list" class="release-grid" aria-live="polite"></div>
+      </section>
+    </main>
+    <template id="release-template">
+      <article class="release-card">
+        <div class="card-heading">
+          <div>
+            <p class="release-id"></p>
+            <h3 class="release-name"></h3>
+          </div>
+          <span class="status-pill"></span>
+        </div>
+        <dl class="metadata">
+          <div><dt>Target</dt><dd class="target-date"></dd></div>
+          <div><dt>Owner</dt><dd class="owner"></dd></div>
+          <div><dt>Risk score</dt><dd class="risk-score"></dd></div>
+        </dl>
+        <h4>Verification checks</h4>
+        <ul class="check-list"></ul>
+        <div class="risk-section">
+          <h4>Risks</h4>
+          <ul class="risk-list"></ul>
+        </div>
+      </article>
+    </template>
+    <script type="module" src="src/app.mjs"></script>
+  </body>
+</html>
+
