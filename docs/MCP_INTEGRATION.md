@@ -16,14 +16,14 @@ Official reference: https://github.com/github/github-mcp-server
 
 ## Completed workflow record
 
-Status: Pending. Configuration alone does not prove a working integration.
+Status: Completed through the Codex GitHub MCP connector.
 
-- Date:
-- AI tool and version:
-- Repository URL:
-- Pull request URL:
-- Read-only request:
-- Returned result:
-- Human verification:
-- Screenshot or transcript location:
+- Date: 2026-10-03
+- AI tool and version: Codex (GPT-5) with the GitHub MCP connector
+- Repository URL: https://github.com/thaisanchhour/ai-practice
+- Pull request URL: https://github.com/thaisanchhour/ai-practice/pull/5
+- Read-only request: Retrieve repository metadata, PR 5 metadata and diff, and the complete changed-file list.
+- Returned result: Public repository `thaisanchhour/ai-practice`, default branch `main`; PR 5 was open, draft, mergeable, based on `feature/04-summary-automation`, with 17 changed files at the time of the query.
+- Human verification: Repository owner/name, PR title, base/head branches, draft status, and the 17 filenames matched the GitHub PR page and local branch plan.
+- Access limitation: Only read operations were used for this verification. No comment, review, merge, permission, or credential operation was requested.
 

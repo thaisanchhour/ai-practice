@@ -4,20 +4,18 @@ Prepared on 2026-10-03. Status values distinguish completed local work from exte
 
 | Criterion | Required evidence | Project record | Status |
 | --- | --- | --- | --- |
-| Core workflows | Three or more PRs or tickets | Five feature branches are prepared for separate PRs | Prepared, not yet submitted |
-| Code quality | Five real AI-assisted PR reviews | `docs/reviews/` contains five review forms mapped to the planned PRs | Templates only |
-| Automation | Three repeatable tasks | Data validation, summary generation, and release-record creation | Implementation pending feature branches |
-| MCP integration | Successful GitHub MCP workflow | Read-only GitHub MCP configuration and procedure | Configuration pending verification |
-| End-to-end task | Plan, implementation, tests, CI, deployment, and post-release check | `docs/PLAN.md`, project code, workflows, and release checklist | Deployment pending |
-| Best-practices guide | Shared guide | `docs/BEST_PRACTICES_GUIDE.md` | Draft pending sharing |
+| Core workflows | Three or more PRs or tickets | Five stacked draft PRs: `#1` through `#5` | Completed with real GitHub URLs |
+| Code quality | Five real AI-assisted PR reviews | `docs/reviews/` records five Codex-assisted reviews, decisions, fixes, and verification | Completed with Codex; reviewer approval is needed if Claude Code is mandatory |
+| Automation | Three repeatable tasks | Data validation, summary generation, and release-record creation | Completed and tested locally |
+| MCP integration | Successful GitHub MCP workflow | Codex GitHub connector retrieved repository, PR 5, diff, and changed-file metadata | Completed read-only workflow on 2026-10-03 |
+| End-to-end task | Plan, implementation, tests, CI, deployment, and post-release check | `docs/PLAN.md`, five PRs, project code, workflows, and release checklist | Implementation and tests complete; merge, hosted CI, and deployment pending |
+| Best-practices guide | Shared guide | `docs/BEST_PRACTICES_GUIDE.md` is published in draft PR 5 | Prepared in a public PR; final shared/merged location pending |
 | Team knowledge sharing | Two sharing instances | Two concise how-to guides | Drafts pending sharing records |
 
 ## Required completion records
 
-- URLs for five pull requests and their merge or closure status.
-- Five review records naming the AI tool and showing accepted, rejected, or deferred findings.
-- Successful CI run URL.
-- Successful GitHub MCP read-only query with date and result.
+- Merge or closure status for PRs 1 through 5.
+- Successful CI run URL after the delivery workflow is available on the target branch.
 - GitHub Pages deployment URL and post-release verification.
 - Sharing dates, audience, and shared location for the guide and two how-to records.
 

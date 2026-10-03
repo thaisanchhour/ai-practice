@@ -35,10 +35,11 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepare static site
         run: |
-          mkdir -p _site/src _site/data
+          mkdir -p _site/src _site/data _site/lib
           cp index.html _site/
           cp src/app.mjs src/styles.css _site/src/
           cp data/releases.json _site/data/
+          cp lib/risk.mjs _site/lib/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
