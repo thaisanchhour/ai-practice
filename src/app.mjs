@@ -1,18 +1,10 @@
+import { calculateRiskScore } from "../lib/risk.mjs";
+
 const statusLabels = {
   ready: "Ready",
   review: "Needs review",
   blocked: "Blocked"
 };
-
-function calculateRiskScore(release) {
-  const missingChecks = Object.values(release.checks).filter((value) => !value).length;
-  const severityPoints = { low: 1, medium: 3, high: 6 };
-  const riskPoints = release.risks.reduce(
-    (total, risk) => total + (severityPoints[risk.severity] ?? 0),
-    0
-  );
-  return missingChecks * 2 + riskPoints;
-}
 
 function formatDate(value) {
   return new Intl.DateTimeFormat("en", {
